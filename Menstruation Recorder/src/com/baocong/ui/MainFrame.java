@@ -2,7 +2,6 @@ package com.baocong.ui;
 
 import java.awt.BorderLayout;
 import java.awt.Color;
-import java.awt.Font;
 import java.awt.Toolkit;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
@@ -26,9 +25,8 @@ public class MainFrame extends JFrame {
 	public MainFrame() {
 		setTitle("Menstruation Recorder v1.1 beta -- developed by B.C.");
 		setIconImage(Toolkit.getDefaultToolkit().getImage("res/icon.png"));
-		setFont(new Font("Arial", Font.PLAIN, 12));
+		setFont(FontAttr.menuFont);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(0, 0, 1024, 768);
 
 		JMenuBar menuBar = new MenuPanel();
 		menuBar.setFont(FontAttr.menuFont);
@@ -47,7 +45,7 @@ public class MainFrame extends JFrame {
 		contentPane.add(splitPane, BorderLayout.CENTER);
 
 		JTabbedPane tabbedPane = new JTabbedPane(JTabbedPane.TOP);
-		tabbedPane.setFont(new Font("Arial", Font.PLAIN, 15));
+		tabbedPane.setFont(FontAttr.menuFont);
 		splitPane.setRightComponent(tabbedPane);
 
 		JPanel welcome = new WelcomePanel();
