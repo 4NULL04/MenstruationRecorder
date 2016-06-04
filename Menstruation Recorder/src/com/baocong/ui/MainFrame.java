@@ -15,6 +15,7 @@ import javax.swing.border.EmptyBorder;
 
 import com.baocong.data.FontAttr;
 import com.baocong.data.LocalStorage;
+import com.baocong.main.AppInfo;
 
 public class MainFrame extends JFrame {
 
@@ -23,7 +24,7 @@ public class MainFrame extends JFrame {
 	static boolean isChanged = false;
 
 	public MainFrame() {
-		setTitle("Menstruation Recorder v1.1 beta -- developed by B.C.");
+		setTitle("Menstruation Recorder " + AppInfo.APP_VERSION + " -- developed by " + AppInfo.AUTHOR_ABBR);
 		setIconImage(Toolkit.getDefaultToolkit().getImage("res/icon.png"));
 		setFont(FontAttr.menuFont);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);

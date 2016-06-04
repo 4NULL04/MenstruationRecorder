@@ -21,6 +21,7 @@ import com.baocong.data.FileData;
 import com.baocong.data.FontAttr;
 import com.baocong.data.LocalStorage;
 import com.baocong.data.LogData;
+import com.baocong.main.AppInfo;
 
 public class MenuPanel extends JMenuBar implements ActionListener {
 
@@ -84,6 +85,7 @@ public class MenuPanel extends JMenuBar implements ActionListener {
 		JMenuItem mntmSaveAs = new JMenuItem("Save As");
 		mntmSaveAs.setFont(FontAttr.menuFont);
 		mntmSaveAs.setMnemonic('A');
+		mntmSaveAs.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_S, InputEvent.CTRL_MASK | InputEvent.ALT_MASK));
 		mntmSaveAs.setActionCommand("saveas");
 		mntmSaveAs.addActionListener(this);
 		mnMenu.add(mntmSaveAs);
@@ -129,6 +131,7 @@ public class MenuPanel extends JMenuBar implements ActionListener {
 		JMenuItem mntmHelp = new JMenuItem("Help");
 		mntmHelp.setFont(FontAttr.menuFont);
 		mntmHelp.setMnemonic('H');
+		mntmHelp.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_H, InputEvent.CTRL_MASK));
 		mntmHelp.setActionCommand("help");
 		mntmHelp.addActionListener(this);
 		mnHelp.add(mntmHelp);
@@ -139,6 +142,7 @@ public class MenuPanel extends JMenuBar implements ActionListener {
 		JMenuItem mntmAbout = new JMenuItem("About");
 		mntmAbout.setFont(FontAttr.menuFont);
 		mntmAbout.setMnemonic('A');
+		mntmAbout.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_A, InputEvent.CTRL_MASK));
 		mntmAbout.setActionCommand("about");
 		mntmAbout.addActionListener(this);
 		mnHelp.add(mntmAbout);
@@ -258,11 +262,7 @@ public class MenuPanel extends JMenuBar implements ActionListener {
 	}
 
 	private void aboutAction() {
-		String message = "Menstruation Recorder\n\n" + "Version: 1.1.12 beta\n\n"
-				+ "(C) Copyright Menstruation Recorder contributors and others 2016. All rights reserved.\n"
-				+ "This software was designed for personal using, do not use it in commercial purpose.\n"
-				+ "All the data stored in local storage were private. Peeking without permission was illegal.\n\n";
-		JOptionPane.showMessageDialog(getParent(), message, "About", JOptionPane.PLAIN_MESSAGE);
+		JOptionPane.showMessageDialog(getParent(), AppInfo.AppMessage, "About", JOptionPane.PLAIN_MESSAGE);
 	}
 
 	private class Filter extends FileFilter {

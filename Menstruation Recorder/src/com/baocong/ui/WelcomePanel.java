@@ -9,9 +9,11 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.SwingConstants;
 
+import com.baocong.main.AppInfo;
+
 public class WelcomePanel extends JPanel {
 
-	private static final long serialVersionUID = -8881129257096819718L;
+	private static final long serialVersionUID = 568777379666428040L;
 
 	public WelcomePanel() {
 		setBackground(Color.WHITE);
@@ -33,7 +35,7 @@ public class WelcomePanel extends JPanel {
 		lblFirst.setHorizontalAlignment(SwingConstants.CENTER);
 		panelFooter.add(lblFirst);
 
-		JLabel lblSecond = new JLabel("Copyright (C) Cong Bao 2016");
+		JLabel lblSecond = new JLabel(AppInfo.COPYRIGHT);
 		lblSecond.setFont(new Font("Times New Roman", Font.PLAIN, 15));
 		lblSecond.setHorizontalAlignment(SwingConstants.CENTER);
 		panelFooter.add(lblSecond);

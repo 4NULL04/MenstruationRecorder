@@ -8,7 +8,7 @@ import javax.swing.UIManager;
 
 import com.baocong.ui.MainFrame;
 
-public class Demo {
+public class Application {
 
 	public static final Point CENTER = GraphicsEnvironment.getLocalGraphicsEnvironment().getCenterPoint();
 	public static final int WIDTH = 1024;
